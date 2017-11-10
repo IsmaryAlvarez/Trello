@@ -1,19 +1,23 @@
-	var textarea = document.getElementById('comment');
-
-	textarea.addEventListener('click', function(){
-		
-		var formulario = document.getElementById('formu');
+var textarea = document.getElementById('comment');
+ 
+	textarea.addEventListener('click', function() {
+	textarea.style.background= '#DCDCDC';
+	var formulario = document.getElementById('formu');
 	formulario.style.display = 'block';
+	var fondoText= document.getElementsByClassName('text')[0];
+	fondoText.style.backgroundColor= '#D3D3D3';
 
-	})
+ }
+)
 
 
 var newComments = document.createElement('div');
-		newComments.setAttribute('id', 'divPadre');
+	newComments.setAttribute('id', 'divPadre');
 
 	var botoncito = document.getElementById('btn');
 
 	botoncito.addEventListener('click', function(){
+
 		//tenemos q tomar el texto ingresado en el textarea
 		var comments = document.getElementById('comment').value;
 		
@@ -22,10 +26,9 @@ var newComments = document.createElement('div');
 
 		//contenedor que esta en el html
 		var cont = document.getElementById('cont');
+		cont.style.backgroundColor= '#E2E4E6';
 
-		//creamos el div que contiene cada comentario
-		//var newComments = document.createElement('div');
-		//newComments.setAttribute('id', 'divPadre');
+		
 
 		//validar que textarea no tenga un mensaje
 		if(comments.length=== 0 || comments ==null || comments.value ===''){
@@ -36,30 +39,32 @@ var newComments = document.createElement('div');
 		//nodos de texto del textarea
 		var textNewComment = document.createTextNode(comments);
 
-		// fecha
-		var dateSpan = document.createElement("span");
-		dateSpan.textContent = new Date();
-
 		//crear otro añade link Lista
 
 		var lista = document.createElement('div');
-		lista.innerHTML = '<a href="">Añadir otra lista</a>';
+		lista.setAttribute('class','newList');
+		lista.innerHTML = '<a href="">Añadir otra lista...</a>';
 
 		// añadiendole clase
 		lista.setAttribute("onclick", "function2()");
 
+
+
+		// añadiendole clase
+		lista.setAttribute("onclick", "function2()");
 		var contenedorElemento= document.createElement('p');
 		contenedorElemento.appendChild(textNewComment);
-		newComments.appendChild(dateSpan);
+
 		newComments.appendChild(contenedorElemento);
 		newComments.appendChild(lista);
 
-		cont.appendChild(newComments)
+		cont.appendChild(newComments);
 
+		
 	var form2 = document.getElementById('form1');
-	document.getElementsByClassName('text')[0].removeChild(form2);
+	document.getElementsByClassName('text')[0].removeChild(form2)
 
-	
+
 	});
 
 
