@@ -2,6 +2,15 @@
 var textarea = document.getElementById('comment');
 textarea.setAttribute("onclick", "activeTxt()");
 
+function activeTxt() {
+	textarea.style.background= 'white';
+	var formulario = document.getElementById('formu');
+	formulario.style.display = 'block';
+	var fondoText= document.getElementsByClassName('text')[0];
+	fondoText.style.backgroundColor= '#D3D3D3';
+};
+
+
 // Creando el div contenedor
 var newComments = document.createElement('div');
 	newComments.setAttribute('id', 'divContainer');
@@ -58,20 +67,13 @@ function save(){
 
 };
 
-
-function activeTxt() {
-	textarea.style.background= 'white';
-	var formulario = document.getElementById('formu');
+function function2(){		
+	var formulario = document.getElementById('formu2');
 	formulario.style.display = 'block';
-	var fondoText= document.getElementsByClassName('text')[0];
-	fondoText.style.backgroundColor= '#D3D3D3';
 };
 
-
-
-
 var boton2 = document.getElementById('btn2');
-	boton2.addEventListener('click', 'save2()');
+	boton2.setAttribute('onclick', 'save2()')
 
 function save2(){
 	//tenemos q tomar el texto ingresado en el textarea
@@ -103,9 +105,4 @@ function save2(){
 		newComments.appendChild(lista);
 
 	cont.appendChild(newComments);
-};
-
-function function2(){		
-	var formulario = document.getElementById('formu2');
-	formulario.style.display = 'block';
 };
