@@ -103,23 +103,36 @@ body {
     padding: 10px;
 }
 
+.text2 {
+    border-radius: 3px;
+    height: auto;
+    width: 285px;
+    float: left;
+    margin: 12px;
+    padding: 10px;
+        outline: 1px solid red;
+}
+
 /* all */
 #comment::-webkit-input-placeholder { color: white }
 #container-1::-webkit-input-placeholder { color: white }
 
 .icon2{
-
     float: left;
     /* position: relative; */
-    margin-left: 440px;
-    margin-top: -3px;
+    margin-left: 390px;
+    margin-top: -6px;
+    /* margin-top: -3px; */
 }
 
-.icon2 p{
+.icon2 i{
 
-margin: 6px;
+    margin: 5px;
     background-color: #B0E0E6;
-    width: 40px;
+    padding: 8px;
+    width: 30px;
+    /* height: 38px; */
+    /* vertical-align: middle; */
     border-radius: 3px;
     float: left;
 }
@@ -128,7 +141,7 @@ textarea {
     width: 90%;
     font-size: 15px;
     padding: 13px;
-    background-color: #3A92AF;
+    background-color: white/*#3A92AF*/;
     color: white;
 }
 
@@ -144,6 +157,8 @@ textarea {
 
 .newList {
 	padding: 5px;
+
+    border-bottom: .5px solid rgb(211, 211, 211);
 }
 #btn:disabled {
     background-color: #e0dbdb;
@@ -198,4 +213,10 @@ textarea {
 }
 #cont span {
 	margin-left: 1em;
+}
+
+#nuevoDiv{
+    
+    outline: 2px solid red;
+
 }
